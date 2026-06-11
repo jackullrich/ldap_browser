@@ -104,6 +104,16 @@ class LdapBrowser(CustomBrowser):
     ]
     columns = [
         CustomBrowserTableColumn(
+            Key="ldap_type",
+            Name="Type",
+            FillWidth=False,
+            Width=100,
+            DisableSort=False,
+            DisableFilterMenu=False,
+            DisableDoubleClick=False,
+            ColumnType=CustomBrowserTableColumnType.String
+        ),
+        CustomBrowserTableColumn(
             Key="samaccountname",
             Name="Account",
             FillWidth=True,
@@ -125,7 +135,7 @@ class LdapBrowser(CustomBrowser):
         )
     ]
     default_visible_columns = [
-        "Account", "Description"
+        "Type", "Account", "Description"
     ]
     extra_table_inputs = [
         CustomBrowserExtraTableTaskingInput(
