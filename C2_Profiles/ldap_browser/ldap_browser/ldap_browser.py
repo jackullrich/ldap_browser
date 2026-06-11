@@ -83,7 +83,7 @@ async def export_ldap_browser(self, message: ExportFunctionMessage) -> ExportFun
     return ExportFunctionMessageResponse(Success=True, CompletionMessage="Creating file in future support of OpenGraph support, but no edges added currently")
 
 class LdapBrowser(CustomBrowser):
-    name = "LDAP Browser"
+    name = "ldap_browser"
     description = "A browser for LDAP information."
     author = "@its_a_feature_"
     semver = "0.0.1"
